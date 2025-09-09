@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowBeat Sequencer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'light-bg': '#F7F7F8',
+              'main-bg': '#FFFFFF',
+              'primary': '#000000',
+              'secondary': '#8A8A8E',
+              'accent': '#007AFF',
+              'border-color': '#E5E5E7',
+              'step-inactive': '#EDEDF0',
+              'step-active': '#000000',
+              'step-hover': '#D1D1D6',
+              'step-playing': '#A5A5AA',
+            },
+            boxShadow: {
+              'main': '0px 4px 12px rgba(0, 0, 0, 0.05)',
+              'inner-sm': 'inset 0 1px 2px 0 rgb(0 0 0 / 0.05)',
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.3s ease-out',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.539.0",
+    "react-dnd-html5-backend": "https://esm.sh/react-dnd-html5-backend@^16.0.1",
+    "react-dnd": "https://esm.sh/react-dnd@^16.0.1",
+    "tone": "https://esm.sh/tone@^15.1.22"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

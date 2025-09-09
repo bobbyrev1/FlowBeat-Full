@@ -1,0 +1,5 @@
+{
+  "name": "Deploy FlowBeat Sequencer",
+  "description": "A browser-based step sequencer inspired by FL Studio. Create drum patterns with a slick interface, and arrange full tracks with patterns and audio clips in the versatile song mode. Upload your own samples and craft your unique sound.",
+  "requestFramePermissions": []
+}
